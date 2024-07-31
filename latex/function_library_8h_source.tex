@@ -1,0 +1,28 @@
+\doxysection{function\+Library.\+h}
+\hypertarget{function_library_8h_source}{}\label{function_library_8h_source}\mbox{\hyperlink{function_library_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ fucntionLibrary.h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifdef\ MAINLIBRARY\_EXPORTS}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ MAINLIBRARY\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ MAINLIBRARY\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MAINLIBRARY\_API}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\_API}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{function_library_8h_afc0c930bbca5c7b42243d8265fcdfd9f}{sayHello}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\_API}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{function_library_8h_a410995c72333122db8e7f73570655e4a}{TranscribeAudio}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ modelName,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ wavFile);}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{function_library_8h_a62ca56f34575d760fb27ec96a6a38ec0}{AudioInOut}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ audioFileInPath,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ audioFileOutPath);}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+
+\end{DoxyCode}
