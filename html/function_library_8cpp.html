@@ -93,8 +93,23 @@ Functions</h2></td></tr>
 <tr class="memitem:a1da8ab333b000f2bc3d9fc92a0967859" id="r_a1da8ab333b000f2bc3d9fc92a0967859"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1da8ab333b000f2bc3d9fc92a0967859">AudioInOut</a> (const char *audioFileInPath, const char *audioFileOutPath)</td></tr>
 <tr class="memdesc:a1da8ab333b000f2bc3d9fc92a0967859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not implemented yet.  <br /></td></tr>
 <tr class="separator:a1da8ab333b000f2bc3d9fc92a0967859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee8958a19e5c23134b211091508c802" id="r_a7ee8958a19e5c23134b211091508c802"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ee8958a19e5c23134b211091508c802">read_wav_Ex</a> (const std::string &amp;filename, std::vector&lt; float &gt; &amp;pcmf32, std::vector&lt; std::vector&lt; float &gt; &gt; &amp;pcmf32s, bool stereo)</td></tr>
+<tr class="separator:a7ee8958a19e5c23134b211091508c802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad28204ce99fa2b1e5687f53027a1cc35" id="r_ad28204ce99fa2b1e5687f53027a1cc35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad28204ce99fa2b1e5687f53027a1cc35">read_wav</a> (const std::string &amp;filename, std::vector&lt; float &gt; &amp;pcmf32, std::vector&lt; std::vector&lt; float &gt; &gt; &amp;pcmf32s, bool stereo)</td></tr>
 <tr class="separator:ad28204ce99fa2b1e5687f53027a1cc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a899c36eebf4a37a55734011a15412" id="r_ae2a899c36eebf4a37a55734011a15412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2a899c36eebf4a37a55734011a15412">flog</a> (const std::string &amp;text)</td></tr>
+<tr class="separator:ae2a899c36eebf4a37a55734011a15412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8499fd0b35db9ed427744975703cdeac" id="r_a8499fd0b35db9ed427744975703cdeac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8499fd0b35db9ed427744975703cdeac">initLog</a> (const char *logFile)</td></tr>
+<tr class="separator:a8499fd0b35db9ed427744975703cdeac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12166027cee9b896b6d9bef82fb72b3c" id="r_a12166027cee9b896b6d9bef82fb72b3c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12166027cee9b896b6d9bef82fb72b3c">initTrascribe</a> (const char *modelName, const char *logFilePath=nullptr)</td></tr>
+<tr class="memdesc:a12166027cee9b896b6d9bef82fb72b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Transcribe Engine.  <br /></td></tr>
+<tr class="separator:a12166027cee9b896b6d9bef82fb72b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b6603e8bdf8849b41942ff8e007cff" id="r_a43b6603e8bdf8849b41942ff8e007cff"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43b6603e8bdf8849b41942ff8e007cff">transcribe</a> (const char *wavFile)</td></tr>
+<tr class="memdesc:a43b6603e8bdf8849b41942ff8e007cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">transcribe audio only.  <br /></td></tr>
+<tr class="separator:a43b6603e8bdf8849b41942ff8e007cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ae02caf8c18b80aa66852538c10240" id="r_ab2ae02caf8c18b80aa66852538c10240"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2ae02caf8c18b80aa66852538c10240">transcribeFreeMemory</a> ()</td></tr>
+<tr class="memdesc:ab2ae02caf8c18b80aa66852538c10240"><td class="mdescLeft">&#160;</td><td class="mdescRight">free memory.  <br /></td></tr>
+<tr class="separator:ab2ae02caf8c18b80aa66852538c10240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d20e54e01b0fd4d82359dc1d77cb587" id="r_a1d20e54e01b0fd4d82359dc1d77cb587"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d20e54e01b0fd4d82359dc1d77cb587">TranscribeAudio</a> (const char *modelName, const char *wavFile)</td></tr>
 <tr class="memdesc:a1d20e54e01b0fd4d82359dc1d77cb587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transcribes an audio file with WAV format.  <br /></td></tr>
 <tr class="separator:a1d20e54e01b0fd4d82359dc1d77cb587"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,6 +118,14 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:ac021d3952bec5e5a355f3aed4e7287cf" id="r_ac021d3952bec5e5a355f3aed4e7287cf"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac021d3952bec5e5a355f3aed4e7287cf">MIN_AUDIO_LENGTH_MS</a> = 1000</td></tr>
 <tr class="separator:ac021d3952bec5e5a355f3aed4e7287cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854d0c3a6441e4c7b078536142f55b08" id="r_a854d0c3a6441e4c7b078536142f55b08"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a854d0c3a6441e4c7b078536142f55b08">logStream</a></td></tr>
+<tr class="separator:a854d0c3a6441e4c7b078536142f55b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a313c9404141128f5466789654a394" id="r_af5a313c9404141128f5466789654a394"><td class="memItemLeft" align="right" valign="top">whisper_context_params&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5a313c9404141128f5466789654a394">cparams</a></td></tr>
+<tr class="separator:af5a313c9404141128f5466789654a394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c100484d5bfd93970e054a1f799d529" id="r_a3c100484d5bfd93970e054a1f799d529"><td class="memItemLeft" align="right" valign="top">whisper_full_params&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c100484d5bfd93970e054a1f799d529">wparams</a></td></tr>
+<tr class="separator:a3c100484d5bfd93970e054a1f799d529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef9cc7ef3214d69c6d5be5d4f47f1f6" id="r_adef9cc7ef3214d69c6d5be5d4f47f1f6"><td class="memItemLeft" align="right" valign="top">struct whisper_context *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adef9cc7ef3214d69c6d5be5d4f47f1f6">ctx</a> = nullptr</td></tr>
+<tr class="separator:adef9cc7ef3214d69c6d5be5d4f47f1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a1da8ab333b000f2bc3d9fc92a0967859" name="a1da8ab333b000f2bc3d9fc92a0967859"></a>
@@ -128,6 +151,72 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ae2a899c36eebf4a37a55734011a15412" name="ae2a899c36eebf4a37a55734011a15412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a899c36eebf4a37a55734011a15412">&#9670;&#160;</a></span>flog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void flog </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8499fd0b35db9ed427744975703cdeac" name="a8499fd0b35db9ed427744975703cdeac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8499fd0b35db9ed427744975703cdeac">&#9670;&#160;</a></span>initLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initLog </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>logFile</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12166027cee9b896b6d9bef82fb72b3c" name="a12166027cee9b896b6d9bef82fb72b3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12166027cee9b896b6d9bef82fb72b3c">&#9670;&#160;</a></span>initTrascribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="function_library_8h.html#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> int initTrascribe </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>modelName</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>logFilePath</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize Transcribe Engine. </p>
+<p>This function load a model and initialzie transcribe engine</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modelName</td><td>The name of the model to use for transcription. </td></tr>
+    <tr><td class="paramname">logFilePath</td><td>The log file to save log to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success </dd></dl>
+
+</div>
+</div>
 <a id="ad28204ce99fa2b1e5687f53027a1cc35" name="ad28204ce99fa2b1e5687f53027a1cc35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad28204ce99fa2b1e5687f53027a1cc35">&#9670;&#160;</a></span>read_wav()</h2>
 
@@ -136,6 +225,37 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool read_wav </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pcmf32</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; float &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pcmf32s</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>stereo</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ee8958a19e5c23134b211091508c802" name="a7ee8958a19e5c23134b211091508c802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ee8958a19e5c23134b211091508c802">&#9670;&#160;</a></span>read_wav_Ex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool read_wav_Ex </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em>, </span></td>
         </tr>
@@ -179,6 +299,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a43b6603e8bdf8849b41942ff8e007cff" name="a43b6603e8bdf8849b41942ff8e007cff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b6603e8bdf8849b41942ff8e007cff">&#9670;&#160;</a></span>transcribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * transcribe </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>wavFile</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>transcribe audio only. </p>
+<p>This function does the transcribe only</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wavFile,the</td><td>audio file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success </dd></dl>
+
+</div>
+</div>
 <a id="a1d20e54e01b0fd4d82359dc1d77cb587" name="a1d20e54e01b0fd4d82359dc1d77cb587"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d20e54e01b0fd4d82359dc1d77cb587">&#9670;&#160;</a></span>TranscribeAudio()</h2>
 
@@ -211,7 +358,70 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ab2ae02caf8c18b80aa66852538c10240" name="ab2ae02caf8c18b80aa66852538c10240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ae02caf8c18b80aa66852538c10240">&#9670;&#160;</a></span>transcribeFreeMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * transcribeFreeMemory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>free memory. </p>
+<p>This function frees memory</p>
+<dl class="section return"><dt>Returns</dt><dd>0 if success </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="af5a313c9404141128f5466789654a394" name="af5a313c9404141128f5466789654a394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a313c9404141128f5466789654a394">&#9670;&#160;</a></span>cparams</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">whisper_context_params cparams</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adef9cc7ef3214d69c6d5be5d4f47f1f6" name="adef9cc7ef3214d69c6d5be5d4f47f1f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef9cc7ef3214d69c6d5be5d4f47f1f6">&#9670;&#160;</a></span>ctx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct whisper_context* ctx = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a854d0c3a6441e4c7b078536142f55b08" name="a854d0c3a6441e4c7b078536142f55b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854d0c3a6441e4c7b078536142f55b08">&#9670;&#160;</a></span>logStream</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ofstream logStream</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac021d3952bec5e5a355f3aed4e7287cf" name="ac021d3952bec5e5a355f3aed4e7287cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac021d3952bec5e5a355f3aed4e7287cf">&#9670;&#160;</a></span>MIN_AUDIO_LENGTH_MS</h2>
 
@@ -220,6 +430,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const int MIN_AUDIO_LENGTH_MS = 1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c100484d5bfd93970e054a1f799d529" name="a3c100484d5bfd93970e054a1f799d529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c100484d5bfd93970e054a1f799d529">&#9670;&#160;</a></span>wparams</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">whisper_full_params wparams</td>
         </tr>
       </table>
 </div><div class="memdoc">

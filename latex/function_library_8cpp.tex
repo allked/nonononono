@@ -13,14 +13,34 @@ const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_a65
 \begin{DoxyCompactList}\small\item\em A sample function that prints a greeting. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{function_library_8cpp_a1da8ab333b000f2bc3d9fc92a0967859}{Audio\+In\+Out}} (const char \texorpdfstring{$\ast$}{*}audio\+File\+In\+Path, const char \texorpdfstring{$\ast$}{*}audio\+File\+Out\+Path)
 \begin{DoxyCompactList}\small\item\em Not implemented yet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{function_library_8cpp_a7ee8958a19e5c23134b211091508c802}{read\+\_\+wav\+\_\+\+Ex}} (const std\+::string \&filename, std\+::vector$<$ float $>$ \&pcmf32, std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&pcmf32s, bool stereo)
+\item 
 bool \mbox{\hyperlink{function_library_8cpp_ad28204ce99fa2b1e5687f53027a1cc35}{read\+\_\+wav}} (const std\+::string \&filename, std\+::vector$<$ float $>$ \&pcmf32, std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&pcmf32s, bool stereo)
 \item 
+void \mbox{\hyperlink{function_library_8cpp_ae2a899c36eebf4a37a55734011a15412}{flog}} (const std\+::string \&text)
+\item 
+void \mbox{\hyperlink{function_library_8cpp_a8499fd0b35db9ed427744975703cdeac}{init\+Log}} (const char \texorpdfstring{$\ast$}{*}log\+File)
+\item 
+int \mbox{\hyperlink{function_library_8cpp_a12166027cee9b896b6d9bef82fb72b3c}{init\+Trascribe}} (const char \texorpdfstring{$\ast$}{*}model\+Name, const char \texorpdfstring{$\ast$}{*}log\+File\+Path=nullptr)
+\begin{DoxyCompactList}\small\item\em Initialize Transcribe Engine. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_a43b6603e8bdf8849b41942ff8e007cff}{transcribe}} (const char \texorpdfstring{$\ast$}{*}wav\+File)
+\begin{DoxyCompactList}\small\item\em transcribe audio only. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_ab2ae02caf8c18b80aa66852538c10240}{transcribe\+Free\+Memory}} ()
+\begin{DoxyCompactList}\small\item\em free memory. \end{DoxyCompactList}\item 
 const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_a1d20e54e01b0fd4d82359dc1d77cb587}{Transcribe\+Audio}} (const char \texorpdfstring{$\ast$}{*}model\+Name, const char \texorpdfstring{$\ast$}{*}wav\+File)
 \begin{DoxyCompactList}\small\item\em Transcribes an audio file with WAV format. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 const int \mbox{\hyperlink{function_library_8cpp_ac021d3952bec5e5a355f3aed4e7287cf}{MIN\+\_\+\+AUDIO\+\_\+\+LENGTH\+\_\+\+MS}} = 1000
+\item 
+std\+::ofstream \mbox{\hyperlink{function_library_8cpp_a854d0c3a6441e4c7b078536142f55b08}{log\+Stream}}
+\item 
+whisper\+\_\+context\+\_\+params \mbox{\hyperlink{function_library_8cpp_af5a313c9404141128f5466789654a394}{cparams}}
+\item 
+whisper\+\_\+full\+\_\+params \mbox{\hyperlink{function_library_8cpp_a3c100484d5bfd93970e054a1f799d529}{wparams}}
+\item 
+struct whisper\+\_\+context \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_adef9cc7ef3214d69c6d5be5d4f47f1f6}{ctx}} = nullptr
 \end{DoxyCompactItemize}
 
 
@@ -35,11 +55,51 @@ const int \mbox{\hyperlink{function_library_8cpp_ac021d3952bec5e5a355f3aed4e7287
 
 Not implemented yet. 
 
+\Hypertarget{function_library_8cpp_ae2a899c36eebf4a37a55734011a15412}\label{function_library_8cpp_ae2a899c36eebf4a37a55734011a15412} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!flog@{flog}}
+\index{flog@{flog}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{flog()}{flog()}}
+{\footnotesize\ttfamily void flog (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+\Hypertarget{function_library_8cpp_a8499fd0b35db9ed427744975703cdeac}\label{function_library_8cpp_a8499fd0b35db9ed427744975703cdeac} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!initLog@{initLog}}
+\index{initLog@{initLog}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{initLog()}{initLog()}}
+{\footnotesize\ttfamily void init\+Log (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{log\+File }\end{DoxyParamCaption})}
+
+\Hypertarget{function_library_8cpp_a12166027cee9b896b6d9bef82fb72b3c}\label{function_library_8cpp_a12166027cee9b896b6d9bef82fb72b3c} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!initTrascribe@{initTrascribe}}
+\index{initTrascribe@{initTrascribe}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{initTrascribe()}{initTrascribe()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\+\_\+\+API}} int init\+Trascribe (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{model\+Name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{log\+File\+Path = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Initialize Transcribe Engine. 
+
+This function load a model and initialzie transcribe engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Name} & The name of the model to use for transcription. \\
+\hline
+{\em log\+File\+Path} & The log file to save log to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success 
+\end{DoxyReturn}
 \Hypertarget{function_library_8cpp_ad28204ce99fa2b1e5687f53027a1cc35}\label{function_library_8cpp_ad28204ce99fa2b1e5687f53027a1cc35} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!read\_wav@{read\_wav}}
 \index{read\_wav@{read\_wav}!functionLibrary.cpp@{functionLibrary.cpp}}
 \doxysubsubsection{\texorpdfstring{read\_wav()}{read\_wav()}}
 {\footnotesize\ttfamily bool read\+\_\+wav (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::vector$<$ float $>$ \&}]{pcmf32,  }\item[{std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&}]{pcmf32s,  }\item[{bool}]{stereo }\end{DoxyParamCaption})}
+
+\Hypertarget{function_library_8cpp_a7ee8958a19e5c23134b211091508c802}\label{function_library_8cpp_a7ee8958a19e5c23134b211091508c802} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!read\_wav\_Ex@{read\_wav\_Ex}}
+\index{read\_wav\_Ex@{read\_wav\_Ex}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_wav\_Ex()}{read\_wav\_Ex()}}
+{\footnotesize\ttfamily bool read\+\_\+wav\+\_\+\+Ex (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::vector$<$ float $>$ \&}]{pcmf32,  }\item[{std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&}]{pcmf32s,  }\item[{bool}]{stereo }\end{DoxyParamCaption})}
 
 \Hypertarget{function_library_8cpp_a6534a197e56f75f6e937d082db0bc77c}\label{function_library_8cpp_a6534a197e56f75f6e937d082db0bc77c} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!sayHello@{sayHello}}
@@ -53,6 +113,26 @@ A sample function that prints a greeting.
 
 A sample function that prints a greeting. \begin{DoxyReturn}{Returns}
 A const char pointer to the string; 
+\end{DoxyReturn}
+\Hypertarget{function_library_8cpp_a43b6603e8bdf8849b41942ff8e007cff}\label{function_library_8cpp_a43b6603e8bdf8849b41942ff8e007cff} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!transcribe@{transcribe}}
+\index{transcribe@{transcribe}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{transcribe()}{transcribe()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} transcribe (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{wav\+File }\end{DoxyParamCaption})}
+
+
+
+transcribe audio only. 
+
+This function does the transcribe only
+
+
+\begin{DoxyParams}{Parameters}
+{\em wav\+File,the} & audio file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success 
 \end{DoxyReturn}
 \Hypertarget{function_library_8cpp_a1d20e54e01b0fd4d82359dc1d77cb587}\label{function_library_8cpp_a1d20e54e01b0fd4d82359dc1d77cb587} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!TranscribeAudio@{TranscribeAudio}}
@@ -76,12 +156,51 @@ This function takes a model name and a WAV file, and returns a const char string
 \begin{DoxyReturn}{Returns}
 A const char pointer to the transcription result. 
 \end{DoxyReturn}
+\Hypertarget{function_library_8cpp_ab2ae02caf8c18b80aa66852538c10240}\label{function_library_8cpp_ab2ae02caf8c18b80aa66852538c10240} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!transcribeFreeMemory@{transcribeFreeMemory}}
+\index{transcribeFreeMemory@{transcribeFreeMemory}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{transcribeFreeMemory()}{transcribeFreeMemory()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} transcribe\+Free\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+free memory. 
+
+This function frees memory
+
+\begin{DoxyReturn}{Returns}
+0 if success 
+\end{DoxyReturn}
 
 
 \doxysubsection{Variable Documentation}
+\Hypertarget{function_library_8cpp_af5a313c9404141128f5466789654a394}\label{function_library_8cpp_af5a313c9404141128f5466789654a394} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!cparams@{cparams}}
+\index{cparams@{cparams}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{cparams}{cparams}}
+{\footnotesize\ttfamily whisper\+\_\+context\+\_\+params cparams}
+
+\Hypertarget{function_library_8cpp_adef9cc7ef3214d69c6d5be5d4f47f1f6}\label{function_library_8cpp_adef9cc7ef3214d69c6d5be5d4f47f1f6} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!ctx@{ctx}}
+\index{ctx@{ctx}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{ctx}{ctx}}
+{\footnotesize\ttfamily struct whisper\+\_\+context\texorpdfstring{$\ast$}{*} ctx = nullptr}
+
+\Hypertarget{function_library_8cpp_a854d0c3a6441e4c7b078536142f55b08}\label{function_library_8cpp_a854d0c3a6441e4c7b078536142f55b08} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!logStream@{logStream}}
+\index{logStream@{logStream}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{logStream}{logStream}}
+{\footnotesize\ttfamily std\+::ofstream log\+Stream}
+
 \Hypertarget{function_library_8cpp_ac021d3952bec5e5a355f3aed4e7287cf}\label{function_library_8cpp_ac021d3952bec5e5a355f3aed4e7287cf} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!MIN\_AUDIO\_LENGTH\_MS@{MIN\_AUDIO\_LENGTH\_MS}}
 \index{MIN\_AUDIO\_LENGTH\_MS@{MIN\_AUDIO\_LENGTH\_MS}!functionLibrary.cpp@{functionLibrary.cpp}}
 \doxysubsubsection{\texorpdfstring{MIN\_AUDIO\_LENGTH\_MS}{MIN\_AUDIO\_LENGTH\_MS}}
 {\footnotesize\ttfamily const int MIN\+\_\+\+AUDIO\+\_\+\+LENGTH\+\_\+\+MS = 1000}
+
+\Hypertarget{function_library_8cpp_a3c100484d5bfd93970e054a1f799d529}\label{function_library_8cpp_a3c100484d5bfd93970e054a1f799d529} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!wparams@{wparams}}
+\index{wparams@{wparams}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{wparams}{wparams}}
+{\footnotesize\ttfamily whisper\+\_\+full\+\_\+params wparams}
 
