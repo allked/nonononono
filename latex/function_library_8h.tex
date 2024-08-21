@@ -12,6 +12,8 @@
 \begin{DoxyCompactList}\small\item\em A sample function that prints a greeting. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\+\_\+\+API}} const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8h_a410995c72333122db8e7f73570655e4a}{Transcribe\+Audio}} (const char \texorpdfstring{$\ast$}{*}model\+Name, const char \texorpdfstring{$\ast$}{*}wav\+File)
 \begin{DoxyCompactList}\small\item\em Transcribes an audio file with WAV format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\+\_\+\+API}} int \mbox{\hyperlink{function_library_8h_aaffc77dd44d188debdc2c8e318d4ca5d}{init\+Transcribe}} (const char \texorpdfstring{$\ast$}{*}model\+Name, const char \texorpdfstring{$\ast$}{*}log\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Initialize Transcribe Engine. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\+\_\+\+API}} int \mbox{\hyperlink{function_library_8h_a2ef4126df49d04e304f29992faaa25a5}{init\+Trascribe}} (const char \texorpdfstring{$\ast$}{*}model\+Name, const char \texorpdfstring{$\ast$}{*}log\+File\+Path)
 \begin{DoxyCompactList}\small\item\em Initialize Transcribe Engine. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\+\_\+\+API}} const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8h_af36262e1d74fd0a19d8d31d68e7f48f7}{transcribe}} (const char \texorpdfstring{$\ast$}{*}wav\+File)
@@ -42,6 +44,28 @@
 
 Not implemented yet. 
 
+\Hypertarget{function_library_8h_aaffc77dd44d188debdc2c8e318d4ca5d}\label{function_library_8h_aaffc77dd44d188debdc2c8e318d4ca5d} 
+\index{functionLibrary.h@{functionLibrary.h}!initTranscribe@{initTranscribe}}
+\index{initTranscribe@{initTranscribe}!functionLibrary.h@{functionLibrary.h}}
+\doxysubsubsection{\texorpdfstring{initTranscribe()}{initTranscribe()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\+\_\+\+API}} int init\+Transcribe (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{model\+Name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{log\+File\+Path }\end{DoxyParamCaption})}
+
+
+
+Initialize Transcribe Engine. 
+
+This function load a model and initialzie transcribe engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Name} & The name of the model to use for transcription. \\
+\hline
+{\em log\+File\+Path} & The log file to save log to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success 
+\end{DoxyReturn}
 \Hypertarget{function_library_8h_a2ef4126df49d04e304f29992faaa25a5}\label{function_library_8h_a2ef4126df49d04e304f29992faaa25a5} 
 \index{functionLibrary.h@{functionLibrary.h}!initTrascribe@{initTrascribe}}
 \index{initTrascribe@{initTrascribe}!functionLibrary.h@{functionLibrary.h}}
@@ -95,7 +119,7 @@ This function does the transcribe only
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-0 if success 
+const char pointer to the result text 
 \end{DoxyReturn}
 \Hypertarget{function_library_8h_a410995c72333122db8e7f73570655e4a}\label{function_library_8h_a410995c72333122db8e7f73570655e4a} 
 \index{functionLibrary.h@{functionLibrary.h}!TranscribeAudio@{TranscribeAudio}}

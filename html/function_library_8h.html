@@ -94,6 +94,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a410995c72333122db8e7f73570655e4a" id="r_a410995c72333122db8e7f73570655e4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a410995c72333122db8e7f73570655e4a">TranscribeAudio</a> (const char *modelName, const char *wavFile)</td></tr>
 <tr class="memdesc:a410995c72333122db8e7f73570655e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transcribes an audio file with WAV format.  <br /></td></tr>
 <tr class="separator:a410995c72333122db8e7f73570655e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaffc77dd44d188debdc2c8e318d4ca5d" id="r_aaffc77dd44d188debdc2c8e318d4ca5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaffc77dd44d188debdc2c8e318d4ca5d">initTranscribe</a> (const char *modelName, const char *logFilePath)</td></tr>
+<tr class="memdesc:aaffc77dd44d188debdc2c8e318d4ca5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Transcribe Engine.  <br /></td></tr>
+<tr class="separator:aaffc77dd44d188debdc2c8e318d4ca5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ef4126df49d04e304f29992faaa25a5" id="r_a2ef4126df49d04e304f29992faaa25a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ef4126df49d04e304f29992faaa25a5">initTrascribe</a> (const char *modelName, const char *logFilePath)</td></tr>
 <tr class="memdesc:a2ef4126df49d04e304f29992faaa25a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Transcribe Engine.  <br /></td></tr>
 <tr class="separator:a2ef4126df49d04e304f29992faaa25a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +146,38 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Not implemented yet. </p>
+
+</div>
+</div>
+<a id="aaffc77dd44d188debdc2c8e318d4ca5d" name="aaffc77dd44d188debdc2c8e318d4ca5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaffc77dd44d188debdc2c8e318d4ca5d">&#9670;&#160;</a></span>initTranscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> int initTranscribe </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>modelName</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>logFilePath</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize Transcribe Engine. </p>
+<p>This function load a model and initialzie transcribe engine</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modelName</td><td>The name of the model to use for transcription. </td></tr>
+    <tr><td class="paramname">logFilePath</td><td>The log file to save log to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success </dd></dl>
 
 </div>
 </div>
@@ -221,7 +256,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if success </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>const char pointer to the result text </dd></dl>
 
 </div>
 </div>

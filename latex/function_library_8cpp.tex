@@ -21,7 +21,7 @@ void \mbox{\hyperlink{function_library_8cpp_ae2a899c36eebf4a37a55734011a15412}{f
 \item 
 void \mbox{\hyperlink{function_library_8cpp_a8499fd0b35db9ed427744975703cdeac}{init\+Log}} (const char \texorpdfstring{$\ast$}{*}log\+File)
 \item 
-int \mbox{\hyperlink{function_library_8cpp_a12166027cee9b896b6d9bef82fb72b3c}{init\+Trascribe}} (const char \texorpdfstring{$\ast$}{*}model\+Name, const char \texorpdfstring{$\ast$}{*}log\+File\+Path=nullptr)
+int \mbox{\hyperlink{function_library_8cpp_ab975e876835d78a77da1e090fda8e04c}{init\+Transcribe}} (const char \texorpdfstring{$\ast$}{*}model\+Name, const char \texorpdfstring{$\ast$}{*}log\+File\+Path=nullptr)
 \begin{DoxyCompactList}\small\item\em Initialize Transcribe Engine. \end{DoxyCompactList}\item 
 const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_a43b6603e8bdf8849b41942ff8e007cff}{transcribe}} (const char \texorpdfstring{$\ast$}{*}wav\+File)
 \begin{DoxyCompactList}\small\item\em transcribe audio only. \end{DoxyCompactList}\item 
@@ -67,11 +67,11 @@ Not implemented yet.
 \doxysubsubsection{\texorpdfstring{initLog()}{initLog()}}
 {\footnotesize\ttfamily void init\+Log (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{log\+File }\end{DoxyParamCaption})}
 
-\Hypertarget{function_library_8cpp_a12166027cee9b896b6d9bef82fb72b3c}\label{function_library_8cpp_a12166027cee9b896b6d9bef82fb72b3c} 
-\index{functionLibrary.cpp@{functionLibrary.cpp}!initTrascribe@{initTrascribe}}
-\index{initTrascribe@{initTrascribe}!functionLibrary.cpp@{functionLibrary.cpp}}
-\doxysubsubsection{\texorpdfstring{initTrascribe()}{initTrascribe()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8h_a678deaaffc38f3052bfffee711d58f07}{MAINLIBRARY\+\_\+\+API}} int init\+Trascribe (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{model\+Name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{log\+File\+Path = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+\Hypertarget{function_library_8cpp_ab975e876835d78a77da1e090fda8e04c}\label{function_library_8cpp_ab975e876835d78a77da1e090fda8e04c} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!initTranscribe@{initTranscribe}}
+\index{initTranscribe@{initTranscribe}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{initTranscribe()}{initTranscribe()}}
+{\footnotesize\ttfamily int init\+Transcribe (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{model\+Name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{log\+File\+Path }\end{DoxyParamCaption})}
 
 
 
@@ -132,7 +132,7 @@ This function does the transcribe only
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-0 if success 
+const char pointer to the result text 
 \end{DoxyReturn}
 \Hypertarget{function_library_8cpp_a1d20e54e01b0fd4d82359dc1d77cb587}\label{function_library_8cpp_a1d20e54e01b0fd4d82359dc1d77cb587} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!TranscribeAudio@{TranscribeAudio}}
