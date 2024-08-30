@@ -80,7 +80,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="function_library_8h_source.html">functionLibrary.h</a>&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &quot;../../whisper.cpp/include/whisper.h&quot;</code><br />
+<code>#include &quot;whisper.cpp/include/whisper.h&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -90,6 +90,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a6534a197e56f75f6e937d082db0bc77c" id="r_a6534a197e56f75f6e937d082db0bc77c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6534a197e56f75f6e937d082db0bc77c">sayHello</a> ()</td></tr>
 <tr class="memdesc:a6534a197e56f75f6e937d082db0bc77c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sample function that prints a greeting.  <br /></td></tr>
 <tr class="separator:a6534a197e56f75f6e937d082db0bc77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55af9c574d5d03b46e2b41861513d6c" id="r_af55af9c574d5d03b46e2b41861513d6c"><td class="memItemLeft" align="right" valign="top">const char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af55af9c574d5d03b46e2b41861513d6c">test_sayHelloList</a> (int *size)</td></tr>
+<tr class="separator:af55af9c574d5d03b46e2b41861513d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1da8ab333b000f2bc3d9fc92a0967859" id="r_a1da8ab333b000f2bc3d9fc92a0967859"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1da8ab333b000f2bc3d9fc92a0967859">AudioInOut</a> (const char *audioFileInPath, const char *audioFileOutPath)</td></tr>
 <tr class="memdesc:a1da8ab333b000f2bc3d9fc92a0967859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not implemented yet.  <br /></td></tr>
 <tr class="separator:a1da8ab333b000f2bc3d9fc92a0967859"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,9 +109,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a43b6603e8bdf8849b41942ff8e007cff" id="r_a43b6603e8bdf8849b41942ff8e007cff"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43b6603e8bdf8849b41942ff8e007cff">transcribe</a> (const char *wavFile)</td></tr>
 <tr class="memdesc:a43b6603e8bdf8849b41942ff8e007cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">transcribe audio only.  <br /></td></tr>
 <tr class="separator:a43b6603e8bdf8849b41942ff8e007cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2ae02caf8c18b80aa66852538c10240" id="r_ab2ae02caf8c18b80aa66852538c10240"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2ae02caf8c18b80aa66852538c10240">transcribeFreeMemory</a> ()</td></tr>
-<tr class="memdesc:ab2ae02caf8c18b80aa66852538c10240"><td class="mdescLeft">&#160;</td><td class="mdescRight">free memory.  <br /></td></tr>
-<tr class="separator:ab2ae02caf8c18b80aa66852538c10240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990275b9291bbdfc9f55c593e1d56d08" id="r_a990275b9291bbdfc9f55c593e1d56d08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a990275b9291bbdfc9f55c593e1d56d08">transcribeFreeMemory</a> ()</td></tr>
+<tr class="memdesc:a990275b9291bbdfc9f55c593e1d56d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">free memory.  <br /></td></tr>
+<tr class="separator:a990275b9291bbdfc9f55c593e1d56d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d20e54e01b0fd4d82359dc1d77cb587" id="r_a1d20e54e01b0fd4d82359dc1d77cb587"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d20e54e01b0fd4d82359dc1d77cb587">TranscribeAudio</a> (const char *modelName, const char *wavFile)</td></tr>
 <tr class="memdesc:a1d20e54e01b0fd4d82359dc1d77cb587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transcribes an audio file with WAV format.  <br /></td></tr>
 <tr class="separator:a1d20e54e01b0fd4d82359dc1d77cb587"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,6 +301,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="af55af9c574d5d03b46e2b41861513d6c" name="af55af9c574d5d03b46e2b41861513d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55af9c574d5d03b46e2b41861513d6c">&#9670;&#160;</a></span>test_sayHelloList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char ** test_sayHelloList </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a43b6603e8bdf8849b41942ff8e007cff" name="a43b6603e8bdf8849b41942ff8e007cff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43b6603e8bdf8849b41942ff8e007cff">&#9670;&#160;</a></span>transcribe()</h2>
 
@@ -358,14 +377,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab2ae02caf8c18b80aa66852538c10240" name="ab2ae02caf8c18b80aa66852538c10240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2ae02caf8c18b80aa66852538c10240">&#9670;&#160;</a></span>transcribeFreeMemory()</h2>
+<a id="a990275b9291bbdfc9f55c593e1d56d08" name="a990275b9291bbdfc9f55c593e1d56d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990275b9291bbdfc9f55c593e1d56d08">&#9670;&#160;</a></span>transcribeFreeMemory()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * transcribeFreeMemory </td>
+          <td class="memname">int transcribeFreeMemory </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
