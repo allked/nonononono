@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flog_0',['flog',['../function_library_8cpp.html#ae2a899c36eebf4a37a55734011a15412',1,'functionLibrary.cpp']]]
+  ['convertjsontowbank_0',['convertJsonToWBank',['../function_library_8cpp.html#adefc414b9d343abc27ab1f1789aacdb6',1,'functionLibrary.cpp']]]
 ];

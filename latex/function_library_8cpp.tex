@@ -6,6 +6,14 @@
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include "{}single\+\_\+include/nlohmann/json.\+hpp"{}}\newline
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} = nlohmann\+::json
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -13,13 +21,21 @@ const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_a65
 \begin{DoxyCompactList}\small\item\em A sample function that prints a greeting. \end{DoxyCompactList}\item 
 const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_af55af9c574d5d03b46e2b41861513d6c}{test\+\_\+say\+Hello\+List}} (int \texorpdfstring{$\ast$}{*}size)
 \begin{DoxyCompactList}\small\item\em A sample function that prints a greeting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{function_library_8cpp_ae2a899c36eebf4a37a55734011a15412}{flog}} (const std\+::string \&text)
+\item 
+bool \mbox{\hyperlink{function_library_8cpp_afdd89841220a8b18e39e0844a833a18b}{file\+Exists}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{function_library_8cpp_adefc414b9d343abc27ab1f1789aacdb6}{convert\+Json\+To\+WBank}} (const std\+::string \&json\+Filename, const std\+::string \&wbank\+Filename)
+\item 
+void \mbox{\hyperlink{function_library_8cpp_a387aa1d5771dea896e09af9dadae792e}{load\+Word\+Bank}} (char \texorpdfstring{$\ast$}{*}filename)
+\item 
+\mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{function_library_8cpp_a063b8c53c5cb352938ceb700bfeb147b}{vocab\+\_\+load}} (char \texorpdfstring{$\ast$}{*}jsonfile)
+\item 
 bool \mbox{\hyperlink{function_library_8cpp_a1da8ab333b000f2bc3d9fc92a0967859}{Audio\+In\+Out}} (const char \texorpdfstring{$\ast$}{*}audio\+File\+In\+Path, const char \texorpdfstring{$\ast$}{*}audio\+File\+Out\+Path)
 \begin{DoxyCompactList}\small\item\em Not implemented yet. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{function_library_8cpp_a7ee8958a19e5c23134b211091508c802}{read\+\_\+wav\+\_\+\+Ex}} (const std\+::string \&filename, std\+::vector$<$ float $>$ \&pcmf32, std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&pcmf32s, bool stereo)
 \item 
 bool \mbox{\hyperlink{function_library_8cpp_ad28204ce99fa2b1e5687f53027a1cc35}{read\+\_\+wav}} (const std\+::string \&filename, std\+::vector$<$ float $>$ \&pcmf32, std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&pcmf32s, bool stereo)
-\item 
-void \mbox{\hyperlink{function_library_8cpp_ae2a899c36eebf4a37a55734011a15412}{flog}} (const std\+::string \&text)
 \item 
 void \mbox{\hyperlink{function_library_8cpp_a8499fd0b35db9ed427744975703cdeac}{init\+Log}} (const char \texorpdfstring{$\ast$}{*}log\+File)
 \item 
@@ -34,6 +50,10 @@ const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_a1d
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{function_library_8cpp_a05f0f752a74ea869ed6c4640ad32d705}{data\+\_\+vocab}}
+\item 
+\mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{function_library_8cpp_a7916f3b173e15e30aa965e3707a05eb1}{data\+\_\+sentence}}
+\item 
 const int \mbox{\hyperlink{function_library_8cpp_ac021d3952bec5e5a355f3aed4e7287cf}{MIN\+\_\+\+AUDIO\+\_\+\+LENGTH\+\_\+\+MS}} = 1000
 \item 
 std\+::ofstream \mbox{\hyperlink{function_library_8cpp_a854d0c3a6441e4c7b078536142f55b08}{log\+Stream}}
@@ -46,6 +66,15 @@ struct whisper\+\_\+context \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Typedef Documentation}
+\Hypertarget{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}\label{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!json@{json}}
+\index{json@{json}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} = nlohmann\+::json}
+
+
+
 \doxysubsection{Function Documentation}
 \Hypertarget{function_library_8cpp_a1da8ab333b000f2bc3d9fc92a0967859}\label{function_library_8cpp_a1da8ab333b000f2bc3d9fc92a0967859} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!AudioInOut@{AudioInOut}}
@@ -56,6 +85,18 @@ struct whisper\+\_\+context \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function
 
 
 Not implemented yet. 
+
+\Hypertarget{function_library_8cpp_adefc414b9d343abc27ab1f1789aacdb6}\label{function_library_8cpp_adefc414b9d343abc27ab1f1789aacdb6} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!convertJsonToWBank@{convertJsonToWBank}}
+\index{convertJsonToWBank@{convertJsonToWBank}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{convertJsonToWBank()}{convertJsonToWBank()}}
+{\footnotesize\ttfamily void convert\+Json\+To\+WBank (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+Filename,  }\item[{const std\+::string \&}]{wbank\+Filename }\end{DoxyParamCaption})}
+
+\Hypertarget{function_library_8cpp_afdd89841220a8b18e39e0844a833a18b}\label{function_library_8cpp_afdd89841220a8b18e39e0844a833a18b} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!fileExists@{fileExists}}
+\index{fileExists@{fileExists}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{fileExists()}{fileExists()}}
+{\footnotesize\ttfamily bool file\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
 
 \Hypertarget{function_library_8cpp_ae2a899c36eebf4a37a55734011a15412}\label{function_library_8cpp_ae2a899c36eebf4a37a55734011a15412} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!flog@{flog}}
@@ -91,6 +132,12 @@ This function load a model and initialzie transcribe engine
 \begin{DoxyReturn}{Returns}
 0 if success 
 \end{DoxyReturn}
+\Hypertarget{function_library_8cpp_a387aa1d5771dea896e09af9dadae792e}\label{function_library_8cpp_a387aa1d5771dea896e09af9dadae792e} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!loadWordBank@{loadWordBank}}
+\index{loadWordBank@{loadWordBank}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{loadWordBank()}{loadWordBank()}}
+{\footnotesize\ttfamily void load\+Word\+Bank (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
 \Hypertarget{function_library_8cpp_ad28204ce99fa2b1e5687f53027a1cc35}\label{function_library_8cpp_ad28204ce99fa2b1e5687f53027a1cc35} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!read\_wav@{read\_wav}}
 \index{read\_wav@{read\_wav}!functionLibrary.cpp@{functionLibrary.cpp}}
@@ -191,6 +238,12 @@ This function frees memory
 \begin{DoxyReturn}{Returns}
 0 if success 
 \end{DoxyReturn}
+\Hypertarget{function_library_8cpp_a063b8c53c5cb352938ceb700bfeb147b}\label{function_library_8cpp_a063b8c53c5cb352938ceb700bfeb147b} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!vocab\_load@{vocab\_load}}
+\index{vocab\_load@{vocab\_load}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{vocab\_load()}{vocab\_load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} vocab\+\_\+load (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{jsonfile }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Variable Documentation}
@@ -205,6 +258,18 @@ This function frees memory
 \index{ctx@{ctx}!functionLibrary.cpp@{functionLibrary.cpp}}
 \doxysubsubsection{\texorpdfstring{ctx}{ctx}}
 {\footnotesize\ttfamily struct whisper\+\_\+context\texorpdfstring{$\ast$}{*} ctx = nullptr}
+
+\Hypertarget{function_library_8cpp_a7916f3b173e15e30aa965e3707a05eb1}\label{function_library_8cpp_a7916f3b173e15e30aa965e3707a05eb1} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!data\_sentence@{data\_sentence}}
+\index{data\_sentence@{data\_sentence}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{data\_sentence}{data\_sentence}}
+{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} data\+\_\+sentence}
+
+\Hypertarget{function_library_8cpp_a05f0f752a74ea869ed6c4640ad32d705}\label{function_library_8cpp_a05f0f752a74ea869ed6c4640ad32d705} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!data\_vocab@{data\_vocab}}
+\index{data\_vocab@{data\_vocab}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{data\_vocab}{data\_vocab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} data\+\_\+vocab}
 
 \Hypertarget{function_library_8cpp_a854d0c3a6441e4c7b078536142f55b08}\label{function_library_8cpp_a854d0c3a6441e4c7b078536142f55b08} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!logStream@{logStream}}

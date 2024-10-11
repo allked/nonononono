@@ -73,6 +73,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">functionLibrary.cpp File Reference</div></div>
@@ -84,7 +85,15 @@ $(function() {
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+<code>#include &quot;single_include/nlohmann/json.hpp&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ab701e3ac61a85b337ec5c1abaad6742d" id="r_ab701e3ac61a85b337ec5c1abaad6742d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab701e3ac61a85b337ec5c1abaad6742d">json</a> = nlohmann::json</td></tr>
+<tr class="separator:ab701e3ac61a85b337ec5c1abaad6742d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6534a197e56f75f6e937d082db0bc77c" id="r_a6534a197e56f75f6e937d082db0bc77c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6534a197e56f75f6e937d082db0bc77c">sayHello</a> ()</td></tr>
@@ -93,6 +102,16 @@ Functions</h2></td></tr>
 <tr class="memitem:af55af9c574d5d03b46e2b41861513d6c" id="r_af55af9c574d5d03b46e2b41861513d6c"><td class="memItemLeft" align="right" valign="top">const char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af55af9c574d5d03b46e2b41861513d6c">test_sayHelloList</a> (int *size)</td></tr>
 <tr class="memdesc:af55af9c574d5d03b46e2b41861513d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sample function that prints a greeting.  <br /></td></tr>
 <tr class="separator:af55af9c574d5d03b46e2b41861513d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a899c36eebf4a37a55734011a15412" id="r_ae2a899c36eebf4a37a55734011a15412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2a899c36eebf4a37a55734011a15412">flog</a> (const std::string &amp;text)</td></tr>
+<tr class="separator:ae2a899c36eebf4a37a55734011a15412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd89841220a8b18e39e0844a833a18b" id="r_afdd89841220a8b18e39e0844a833a18b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdd89841220a8b18e39e0844a833a18b">fileExists</a> (const std::string &amp;filename)</td></tr>
+<tr class="separator:afdd89841220a8b18e39e0844a833a18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefc414b9d343abc27ab1f1789aacdb6" id="r_adefc414b9d343abc27ab1f1789aacdb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adefc414b9d343abc27ab1f1789aacdb6">convertJsonToWBank</a> (const std::string &amp;jsonFilename, const std::string &amp;wbankFilename)</td></tr>
+<tr class="separator:adefc414b9d343abc27ab1f1789aacdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387aa1d5771dea896e09af9dadae792e" id="r_a387aa1d5771dea896e09af9dadae792e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a387aa1d5771dea896e09af9dadae792e">loadWordBank</a> (char *filename)</td></tr>
+<tr class="separator:a387aa1d5771dea896e09af9dadae792e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a063b8c53c5cb352938ceb700bfeb147b" id="r_a063b8c53c5cb352938ceb700bfeb147b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab701e3ac61a85b337ec5c1abaad6742d">json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a063b8c53c5cb352938ceb700bfeb147b">vocab_load</a> (char *jsonfile)</td></tr>
+<tr class="separator:a063b8c53c5cb352938ceb700bfeb147b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1da8ab333b000f2bc3d9fc92a0967859" id="r_a1da8ab333b000f2bc3d9fc92a0967859"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1da8ab333b000f2bc3d9fc92a0967859">AudioInOut</a> (const char *audioFileInPath, const char *audioFileOutPath)</td></tr>
 <tr class="memdesc:a1da8ab333b000f2bc3d9fc92a0967859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not implemented yet.  <br /></td></tr>
 <tr class="separator:a1da8ab333b000f2bc3d9fc92a0967859"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,8 +119,6 @@ Functions</h2></td></tr>
 <tr class="separator:a7ee8958a19e5c23134b211091508c802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad28204ce99fa2b1e5687f53027a1cc35" id="r_ad28204ce99fa2b1e5687f53027a1cc35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad28204ce99fa2b1e5687f53027a1cc35">read_wav</a> (const std::string &amp;filename, std::vector&lt; float &gt; &amp;pcmf32, std::vector&lt; std::vector&lt; float &gt; &gt; &amp;pcmf32s, bool stereo)</td></tr>
 <tr class="separator:ad28204ce99fa2b1e5687f53027a1cc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2a899c36eebf4a37a55734011a15412" id="r_ae2a899c36eebf4a37a55734011a15412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2a899c36eebf4a37a55734011a15412">flog</a> (const std::string &amp;text)</td></tr>
-<tr class="separator:ae2a899c36eebf4a37a55734011a15412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8499fd0b35db9ed427744975703cdeac" id="r_a8499fd0b35db9ed427744975703cdeac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8499fd0b35db9ed427744975703cdeac">initLog</a> (const char *logFile)</td></tr>
 <tr class="separator:a8499fd0b35db9ed427744975703cdeac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab975e876835d78a77da1e090fda8e04c" id="r_ab975e876835d78a77da1e090fda8e04c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab975e876835d78a77da1e090fda8e04c">initTranscribe</a> (const char *modelName, const char *logFilePath=nullptr)</td></tr>
@@ -119,6 +136,10 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a05f0f752a74ea869ed6c4640ad32d705" id="r_a05f0f752a74ea869ed6c4640ad32d705"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab701e3ac61a85b337ec5c1abaad6742d">json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05f0f752a74ea869ed6c4640ad32d705">data_vocab</a></td></tr>
+<tr class="separator:a05f0f752a74ea869ed6c4640ad32d705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7916f3b173e15e30aa965e3707a05eb1" id="r_a7916f3b173e15e30aa965e3707a05eb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab701e3ac61a85b337ec5c1abaad6742d">json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7916f3b173e15e30aa965e3707a05eb1">data_sentence</a></td></tr>
+<tr class="separator:a7916f3b173e15e30aa965e3707a05eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac021d3952bec5e5a355f3aed4e7287cf" id="r_ac021d3952bec5e5a355f3aed4e7287cf"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac021d3952bec5e5a355f3aed4e7287cf">MIN_AUDIO_LENGTH_MS</a> = 1000</td></tr>
 <tr class="separator:ac021d3952bec5e5a355f3aed4e7287cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a854d0c3a6441e4c7b078536142f55b08" id="r_a854d0c3a6441e4c7b078536142f55b08"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a854d0c3a6441e4c7b078536142f55b08">logStream</a></td></tr>
@@ -130,6 +151,21 @@ Variables</h2></td></tr>
 <tr class="memitem:adef9cc7ef3214d69c6d5be5d4f47f1f6" id="r_adef9cc7ef3214d69c6d5be5d4f47f1f6"><td class="memItemLeft" align="right" valign="top">struct whisper_context *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adef9cc7ef3214d69c6d5be5d4f47f1f6">ctx</a> = nullptr</td></tr>
 <tr class="separator:adef9cc7ef3214d69c6d5be5d4f47f1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ab701e3ac61a85b337ec5c1abaad6742d" name="ab701e3ac61a85b337ec5c1abaad6742d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab701e3ac61a85b337ec5c1abaad6742d">&#9670;&#160;</a></span>json</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ab701e3ac61a85b337ec5c1abaad6742d">json</a> = nlohmann::json</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a1da8ab333b000f2bc3d9fc92a0967859" name="a1da8ab333b000f2bc3d9fc92a0967859"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1da8ab333b000f2bc3d9fc92a0967859">&#9670;&#160;</a></span>AudioInOut()</h2>
@@ -151,6 +187,44 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Not implemented yet. </p>
+
+</div>
+</div>
+<a id="adefc414b9d343abc27ab1f1789aacdb6" name="adefc414b9d343abc27ab1f1789aacdb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefc414b9d343abc27ab1f1789aacdb6">&#9670;&#160;</a></span>convertJsonToWBank()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void convertJsonToWBank </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>jsonFilename</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>wbankFilename</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdd89841220a8b18e39e0844a833a18b" name="afdd89841220a8b18e39e0844a833a18b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd89841220a8b18e39e0844a833a18b">&#9670;&#160;</a></span>fileExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fileExists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -217,6 +291,23 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if success </dd></dl>
+
+</div>
+</div>
+<a id="a387aa1d5771dea896e09af9dadae792e" name="a387aa1d5771dea896e09af9dadae792e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a387aa1d5771dea896e09af9dadae792e">&#9670;&#160;</a></span>loadWordBank()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadWordBank </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -408,6 +499,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a063b8c53c5cb352938ceb700bfeb147b" name="a063b8c53c5cb352938ceb700bfeb147b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a063b8c53c5cb352938ceb700bfeb147b">&#9670;&#160;</a></span>vocab_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab701e3ac61a85b337ec5c1abaad6742d">json</a> vocab_load </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>jsonfile</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="af5a313c9404141128f5466789654a394" name="af5a313c9404141128f5466789654a394"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5a313c9404141128f5466789654a394">&#9670;&#160;</a></span>cparams</h2>
@@ -431,6 +539,34 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">struct whisper_context* ctx = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7916f3b173e15e30aa965e3707a05eb1" name="a7916f3b173e15e30aa965e3707a05eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7916f3b173e15e30aa965e3707a05eb1">&#9670;&#160;</a></span>data_sentence</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab701e3ac61a85b337ec5c1abaad6742d">json</a> data_sentence</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05f0f752a74ea869ed6c4640ad32d705" name="a05f0f752a74ea869ed6c4640ad32d705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f0f752a74ea869ed6c4640ad32d705">&#9670;&#160;</a></span>data_vocab</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab701e3ac61a85b337ec5c1abaad6742d">json</a> data_vocab</td>
         </tr>
       </table>
 </div><div class="memdoc">
