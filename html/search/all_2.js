@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['data_5fsentence_0',['data_sentence',['../function_library_8cpp.html#a7916f3b173e15e30aa965e3707a05eb1',1,'functionLibrary.cpp']]],
-  ['data_5fvocab_1',['data_vocab',['../function_library_8cpp.html#a05f0f752a74ea869ed6c4640ad32d705',1,'functionLibrary.cpp']]]
+  ['fileexists_0',['fileExists',['../function_library_8cpp.html#afdd89841220a8b18e39e0844a833a18b',1,'functionLibrary.cpp']]],
+  ['flog_1',['flog',['../function_library_8cpp.html#ae2a899c36eebf4a37a55734011a15412',1,'functionLibrary.cpp']]],
+  ['functionlibrary_2ecpp_2',['functionLibrary.cpp',['../function_library_8cpp.html',1,'']]],
+  ['functionlibrary_2eh_3',['functionLibrary.h',['../function_library_8h.html',1,'']]]
 ];

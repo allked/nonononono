@@ -97,6 +97,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a410995c72333122db8e7f73570655e4a" id="r_a410995c72333122db8e7f73570655e4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a410995c72333122db8e7f73570655e4a">TranscribeAudio</a> (const char *modelName, const char *wavFile)</td></tr>
 <tr class="memdesc:a410995c72333122db8e7f73570655e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transcribes an audio file with WAV format.  <br /></td></tr>
 <tr class="separator:a410995c72333122db8e7f73570655e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a290465255ba7c95945ec412b5529ba50" id="r_a290465255ba7c95945ec412b5529ba50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a290465255ba7c95945ec412b5529ba50">vocab_get</a> (int filter)</td></tr>
+<tr class="memdesc:a290465255ba7c95945ec412b5529ba50"><td class="mdescLeft">&#160;</td><td class="mdescRight">load vocabulary based on filters  <br /></td></tr>
+<tr class="separator:a290465255ba7c95945ec412b5529ba50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68db20b5570b53bdd5cb45cf07caeb2d" id="r_a68db20b5570b53bdd5cb45cf07caeb2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68db20b5570b53bdd5cb45cf07caeb2d">vocab_load</a> (const char *vocab_file)</td></tr>
+<tr class="memdesc:a68db20b5570b53bdd5cb45cf07caeb2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">load vocabulary based on filters  <br /></td></tr>
+<tr class="separator:a68db20b5570b53bdd5cb45cf07caeb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaffc77dd44d188debdc2c8e318d4ca5d" id="r_aaffc77dd44d188debdc2c8e318d4ca5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaffc77dd44d188debdc2c8e318d4ca5d">initTranscribe</a> (const char *modelName, const char *logFilePath)</td></tr>
 <tr class="memdesc:aaffc77dd44d188debdc2c8e318d4ca5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Transcribe Engine.  <br /></td></tr>
 <tr class="separator:aaffc77dd44d188debdc2c8e318d4ca5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,6 +310,60 @@ Functions</h2></td></tr>
 <p>free memory. </p>
 <p>This function frees memory</p>
 <dl class="section return"><dt>Returns</dt><dd>0 if success </dd></dl>
+
+</div>
+</div>
+<a id="a290465255ba7c95945ec412b5529ba50" name="a290465255ba7c95945ec412b5529ba50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a290465255ba7c95945ec412b5529ba50">&#9670;&#160;</a></span>vocab_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> const char * vocab_get </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>filter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>load vocabulary based on filters </p>
+<p>This function takes a filter then load specific category vocabulary</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>filter can be: int all = 0; all?? int cet4 = 1; ËÄ¼¶´Ê»ã int cet6 = 2; Áù¼¶´Ê»ã int ncee = 3; ¸ß¿¼ int GET = 4; ¿¼ÑÐ int TOEFL = 5; ÍÐ¸£ int IELTS = 6; ÑÅË¼ int GRE = 7; GRE´Ê»ã //not available int PRIMARY = 8; Ð¡Ñ§´Ê»ã int KET = 9; KET´Ê»ã int PET = 10; PET´Ê»ã</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A category vocabulary specific for that filter </dd></dl>
+
+</div>
+</div>
+<a id="a68db20b5570b53bdd5cb45cf07caeb2d" name="a68db20b5570b53bdd5cb45cf07caeb2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68db20b5570b53bdd5cb45cf07caeb2d">&#9670;&#160;</a></span>vocab_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a678deaaffc38f3052bfffee711d58f07">MAINLIBRARY_API</a> const char * vocab_load </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>vocab_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>load vocabulary based on filters </p>
+<p>This function takes a filter then load specific category vocabulary</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>filter can be: int all = 0; all?? int cet4 = 1; ËÄ¼¶´Ê»ã int cet6 = 2; Áù¼¶´Ê»ã int ncee = 3; ¸ß¿¼ int GET = 4; ¿¼ÑÐ int TOEFL = 5; ÍÐ¸£ int IELTS = 6; ÑÅË¼ int GRE = 7; GRE´Ê»ã //not available int PRIMARY = 8; Ð¡Ñ§´Ê»ã int KET = 9; KET´Ê»ã int PET = 10; PET´Ê»ã</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A category vocabulary specific for that filter </dd></dl>
 
 </div>
 </div>

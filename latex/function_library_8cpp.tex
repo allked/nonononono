@@ -29,7 +29,9 @@ void \mbox{\hyperlink{function_library_8cpp_adefc414b9d343abc27ab1f1789aacdb6}{c
 \item 
 void \mbox{\hyperlink{function_library_8cpp_a387aa1d5771dea896e09af9dadae792e}{load\+Word\+Bank}} (char \texorpdfstring{$\ast$}{*}filename)
 \item 
-\mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{function_library_8cpp_a063b8c53c5cb352938ceb700bfeb147b}{vocab\+\_\+load}} (char \texorpdfstring{$\ast$}{*}jsonfile)
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_af6a4ca7dfbb8abcd89d665021674c738}{vocab\+\_\+get}} (int filter)
+\begin{DoxyCompactList}\small\item\em load vocabulary based on filters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{function_library_8cpp_a3770665aecf957b2503967f9549ffad0}{vocab\+\_\+load}} (char \texorpdfstring{$\ast$}{*}jsonfile)
 \item 
 bool \mbox{\hyperlink{function_library_8cpp_a1da8ab333b000f2bc3d9fc92a0967859}{Audio\+In\+Out}} (const char \texorpdfstring{$\ast$}{*}audio\+File\+In\+Path, const char \texorpdfstring{$\ast$}{*}audio\+File\+Out\+Path)
 \begin{DoxyCompactList}\small\item\em Not implemented yet. \end{DoxyCompactList}\item 
@@ -50,9 +52,9 @@ const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{function_library_8cpp_a1d
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{function_library_8cpp_a05f0f752a74ea869ed6c4640ad32d705}{data\+\_\+vocab}}
+\mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{function_library_8cpp_a35015c0b3806d609031329e21995921c}{json\+\_\+data\+\_\+vocab}}
 \item 
-\mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{function_library_8cpp_a7916f3b173e15e30aa965e3707a05eb1}{data\+\_\+sentence}}
+\mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{function_library_8cpp_ae3e5aea8b651f3abb49d429286b3ec1d}{json\+\_\+data\+\_\+sentence}}
 \item 
 const int \mbox{\hyperlink{function_library_8cpp_ac021d3952bec5e5a355f3aed4e7287cf}{MIN\+\_\+\+AUDIO\+\_\+\+LENGTH\+\_\+\+MS}} = 1000
 \item 
@@ -238,11 +240,31 @@ This function frees memory
 \begin{DoxyReturn}{Returns}
 0 if success 
 \end{DoxyReturn}
-\Hypertarget{function_library_8cpp_a063b8c53c5cb352938ceb700bfeb147b}\label{function_library_8cpp_a063b8c53c5cb352938ceb700bfeb147b} 
+\Hypertarget{function_library_8cpp_af6a4ca7dfbb8abcd89d665021674c738}\label{function_library_8cpp_af6a4ca7dfbb8abcd89d665021674c738} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!vocab\_get@{vocab\_get}}
+\index{vocab\_get@{vocab\_get}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{vocab\_get()}{vocab\_get()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} vocab\+\_\+get (\begin{DoxyParamCaption}\item[{int}]{filter }\end{DoxyParamCaption})}
+
+
+
+load vocabulary based on filters 
+
+This function takes a filter then load specific category vocabulary
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & filter can be\+: int all = 0; all?? int cet4 = 1; ËÄ¼¶´Ê»ã int cet6 = 2; Áù¼¶´Ê»ã int ncee = 3; ¸ß¿¼ int GET = 4; ¿¼ÑÐ int TOEFL = 5; ÍÐ¸£ int IELTS = 6; ÑÅË¼ int GRE = 7; GRE´Ê»ã //not available int PRIMARY = 8; Ð¡Ñ§´Ê»ã int KET = 9; KET´Ê»ã int PET = 10; PET´Ê»ã\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A category vocabulary specific for that filter 
+\end{DoxyReturn}
+\Hypertarget{function_library_8cpp_a3770665aecf957b2503967f9549ffad0}\label{function_library_8cpp_a3770665aecf957b2503967f9549ffad0} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!vocab\_load@{vocab\_load}}
 \index{vocab\_load@{vocab\_load}!functionLibrary.cpp@{functionLibrary.cpp}}
 \doxysubsubsection{\texorpdfstring{vocab\_load()}{vocab\_load()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} vocab\+\_\+load (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{jsonfile }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void vocab\+\_\+load (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{jsonfile }\end{DoxyParamCaption})}
 
 
 
@@ -259,17 +281,17 @@ This function frees memory
 \doxysubsubsection{\texorpdfstring{ctx}{ctx}}
 {\footnotesize\ttfamily struct whisper\+\_\+context\texorpdfstring{$\ast$}{*} ctx = nullptr}
 
-\Hypertarget{function_library_8cpp_a7916f3b173e15e30aa965e3707a05eb1}\label{function_library_8cpp_a7916f3b173e15e30aa965e3707a05eb1} 
-\index{functionLibrary.cpp@{functionLibrary.cpp}!data\_sentence@{data\_sentence}}
-\index{data\_sentence@{data\_sentence}!functionLibrary.cpp@{functionLibrary.cpp}}
-\doxysubsubsection{\texorpdfstring{data\_sentence}{data\_sentence}}
-{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} data\+\_\+sentence}
+\Hypertarget{function_library_8cpp_ae3e5aea8b651f3abb49d429286b3ec1d}\label{function_library_8cpp_ae3e5aea8b651f3abb49d429286b3ec1d} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!json\_data\_sentence@{json\_data\_sentence}}
+\index{json\_data\_sentence@{json\_data\_sentence}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{json\_data\_sentence}{json\_data\_sentence}}
+{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} json\+\_\+data\+\_\+sentence}
 
-\Hypertarget{function_library_8cpp_a05f0f752a74ea869ed6c4640ad32d705}\label{function_library_8cpp_a05f0f752a74ea869ed6c4640ad32d705} 
-\index{functionLibrary.cpp@{functionLibrary.cpp}!data\_vocab@{data\_vocab}}
-\index{data\_vocab@{data\_vocab}!functionLibrary.cpp@{functionLibrary.cpp}}
-\doxysubsubsection{\texorpdfstring{data\_vocab}{data\_vocab}}
-{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} data\+\_\+vocab}
+\Hypertarget{function_library_8cpp_a35015c0b3806d609031329e21995921c}\label{function_library_8cpp_a35015c0b3806d609031329e21995921c} 
+\index{functionLibrary.cpp@{functionLibrary.cpp}!json\_data\_vocab@{json\_data\_vocab}}
+\index{json\_data\_vocab@{json\_data\_vocab}!functionLibrary.cpp@{functionLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{json\_data\_vocab}{json\_data\_vocab}}
+{\footnotesize\ttfamily \mbox{\hyperlink{function_library_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} json\+\_\+data\+\_\+vocab}
 
 \Hypertarget{function_library_8cpp_a854d0c3a6441e4c7b078536142f55b08}\label{function_library_8cpp_a854d0c3a6441e4c7b078536142f55b08} 
 \index{functionLibrary.cpp@{functionLibrary.cpp}!logStream@{logStream}}

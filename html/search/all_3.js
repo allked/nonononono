@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['fileexists_0',['fileExists',['../function_library_8cpp.html#afdd89841220a8b18e39e0844a833a18b',1,'functionLibrary.cpp']]],
-  ['flog_1',['flog',['../function_library_8cpp.html#ae2a899c36eebf4a37a55734011a15412',1,'functionLibrary.cpp']]],
-  ['functionlibrary_2ecpp_2',['functionLibrary.cpp',['../function_library_8cpp.html',1,'']]],
-  ['functionlibrary_2eh_3',['functionLibrary.h',['../function_library_8h.html',1,'']]]
+  ['initlog_0',['initLog',['../function_library_8cpp.html#a8499fd0b35db9ed427744975703cdeac',1,'functionLibrary.cpp']]],
+  ['inittranscribe_1',['initTranscribe',['../function_library_8cpp.html#ab975e876835d78a77da1e090fda8e04c',1,'initTranscribe(const char *modelName, const char *logFilePath=nullptr):&#160;functionLibrary.cpp'],['../function_library_8h.html#aaffc77dd44d188debdc2c8e318d4ca5d',1,'initTranscribe(const char *modelName, const char *logFilePath):&#160;functionLibrary.cpp']]]
 ];
